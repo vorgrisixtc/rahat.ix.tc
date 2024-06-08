@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <script src="
+https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+"></script>
 </head>
 <body>
 <h2 style="color:#fff">rahat beta</h2>
@@ -21,12 +24,11 @@ Açık Tema
         Karanlık Tema
         </button>
         <button class="btn-8">
-            <a style="text-decoration: none;color: #fff;" href="./list.html">Listeleme Modu</a>
+            <a style="text-decoration: none;color: #fff;" href="./index.html">Not Alma Modu</a>
             </button>
-            <button id="create" class="btn-8">Dışa Aktar</button>
-            <a download="Notlar.txt" id="downloadlink" style="display: none; text-decoration: none;">Dosyayı Kaydet</a>
-            <textarea type="text" id="rahat" name="w3review"></textarea>
-            
+            <button id="clickhere" class="btn-8">Dışa Aktar</button>
+            <div class="liste" id="rahat" contenteditable="true">
+            </div>
 <script>
             function changeColor(color) {
     document.body.style.background = color;
@@ -44,35 +46,31 @@ function Dark() {
     changeColor('#000000');
     document.getElementById("rahat").style.backgroundColor = "#000000";
 }    
-(function() {
-    var textFile = null,
-        makeTextFile = function(text) {
-            var data = new Blob([text], {
-                type: 'text/plain'
-            });
+$('#clickhere').click(function(){
+location.reload();
+downloadeverything();
 
-            if (textFile !== null) {
-                window.URL.revokeObjectURL(textFile);
-            }
-
-            textFile = window.URL.createObjectURL(data);
-
-            return textFile;
-        };
+});
 
 
-    var create = document.getElementById('create');
-    var fileContent = document.getElementById("rahat");
+function downloadeverything(){
 
-    create.addEventListener('click', function() {
-      
-        const fileName = "Notlar";
-        document.getElementById("downloadlink").setAttribute("download", fileName);
-        var link = document.getElementById('downloadlink');
-        link.href = makeTextFile(fileContent.value);
-        link.style.display = 'block';
-    }, false);
-})();
+function downloadInnerHtml(filename, elId, mimeType) {
+    
+    var elHtml = document.getElementById(elId).innerHTML;
+       
+    var link = document.createElement('a');
+    mimeType = mimeType || 'text/plain';
+
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click(); 
+}
+
+var fileName =  'testing.txt';
+downloadInnerHtml(fileName, 'rahat','text/html');
+}
+
 </script>
 </body>
 </html>

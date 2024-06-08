@@ -1,4 +1,4 @@
-    body {
+  body {
         font-family: 'San Francisco';
         margin: 0;
         padding: 15px;
@@ -96,4 +96,24 @@
 }
 ::-moz-placeholder {
   color: #fff;  
+}
+.liste {
+  display: list-item;
+  margin-left : 1em;
+  caret-color: #fff;
+  resize: none;
+  outline: none;
+  border: none;
+  width: 100%;
+    height: 100000px;
+    min-height: 100000px;
+      margin-top: 6px;
+        float: left;
+        font-family: 'San Francisco';
+        font-size: xx-large;
+    background-color: rgb(20, 16, 25);
+    color: #fff
+}
+.liste div {
+  display: list-item;
 }
