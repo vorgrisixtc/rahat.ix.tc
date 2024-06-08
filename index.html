@@ -17,6 +17,10 @@ Açık Tema
     <button class="btn-8" onclick="Dark()">
         Karanlık Tema
         </button>
+            <button id="create" class="btn-8">Dışa Aktar</button>
+            <a download="Notlar.txt" id="downloadlink" style="display: none">Dosyayı Kaydet</a>
+
+            <textarea type="text" id="rahat" name="w3review"></textarea>
 <script>
             function changeColor(color) {
     document.body.style.background = color;
@@ -33,8 +37,36 @@ function Koyu() {
 function Dark() {
     changeColor('#000000');
     document.getElementById("rahat").style.backgroundColor = "#000000";
-}      
+}    
+(function() {
+    var textFile = null,
+        makeTextFile = function(text) {
+            var data = new Blob([text], {
+                type: 'text/plain'
+            });
+
+            if (textFile !== null) {
+                window.URL.revokeObjectURL(textFile);
+            }
+
+            textFile = window.URL.createObjectURL(data);
+
+            return textFile;
+        };
+
+
+    var create = document.getElementById('create');
+    var fileContent = document.getElementById("rahat");
+
+    create.addEventListener('click', function() {
+      
+        const fileName = "Notlar";
+        document.getElementById("downloadlink").setAttribute("download", fileName);
+        var link = document.getElementById('downloadlink');
+        link.href = makeTextFile(fileContent.value);
+        link.style.display = 'block';
+    }, false);
+})();
 </script>
-<textarea type="text" id="rahat"></textarea>
 </body>
 </html>
