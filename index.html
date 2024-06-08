@@ -1,14 +1,40 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Yaz.ix.tc</title>
+    <title>Rahat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
 </head>
 <body>
-    <h1 style="color:#FFFFFF;">rahat.ix.tc dev süreci</h1>
+<h2 style="color:#fff">rahat beta</h2>
+<button class="btn-8" onclick="Acik()">
+Açık Tema
+</button>
+<button class="btn-8" onclick="Koyu()">
+    Koyu Tema
+    </button>
+    <button class="btn-8" onclick="Dark()">
+        Karanlık Tema
+        </button>
+<script>
+            function changeColor(color) {
+    document.body.style.background = color;
+}
 
-
-
-
+function Acik() {
+    changeColor('#5A575E');
+    document.getElementById("rahat").style.backgroundColor = "#5A575E";
+}        
+function Koyu() {
+    changeColor('#141019');
+    document.getElementById("rahat").style.backgroundColor = "#141019";
+}      
+function Dark() {
+    changeColor('#000000');
+    document.getElementById("rahat").style.backgroundColor = "#000000";
+}      
+</script>
+<textarea type="text" id="rahat"></textarea>
 </body>
 </html>
