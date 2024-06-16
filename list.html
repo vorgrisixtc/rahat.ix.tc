@@ -27,8 +27,11 @@ Açık Tema
         <button onclick="window.location.href='./index.html';" class="btn-8">
             Not Alma Modu
             </button>
+            <button onclick="window.location.href='./paint.html';" class="btn-8">
+                Çizim Modu
+                </button>
             <button id="clickhere" class="btn-8">Dışa Aktar</button>
-            <div class="liste" id="rahat" contenteditable="true">
+            <div class="liste" contenteditable="true">
             </div>
 <script>
             function changeColor(color) {
@@ -37,15 +40,15 @@ Açık Tema
 
 function Acik() {
     changeColor('#5A575E');
-    document.getElementById("rahat").style.backgroundColor = "#5A575E";
+    style.backgroundColor = "#5A575E";
 }        
 function Koyu() {
     changeColor('#141019');
-    document.getElementById("rahat").style.backgroundColor = "#141019";
+    style.backgroundColor = "#141019";
 }      
 function Dark() {
     changeColor('#000000');
-    document.getElementById("rahat").style.backgroundColor = "#000000";
+    style.backgroundColor = "#000000";
 }    
 $('#clickhere').click(function(){
 location.reload();

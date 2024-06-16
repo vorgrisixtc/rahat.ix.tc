@@ -15,7 +15,6 @@
     .btn-8 {
       background-color: #f0ecfc;
       background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 74%);
-      line-height: 42px;
       padding: 0;
       margin: 14px 0;
       border: none;
@@ -32,10 +31,10 @@
       font-weight: 400px;
       transition: 0.7s;
       padding: 10px 25px;
-      width: 20%;
       height: 45px;
       font-family:  "San Francisco";
       font-size: medium;
+      cursor:pointer;
     }
     .btn-8 span {
       position: relative;
@@ -87,7 +86,7 @@
             float: left;
             font-family: 'San Francisco';
             font-size: xx-large;
-        background-color: rgb(20, 16, 25);
+        background-color: transparent;
         color: #fff
     }
 
@@ -104,14 +103,14 @@
   resize: none;
   outline: none;
   border: none;
-  width: 100%;
+  width: 97%;
     height: 100000px;
     min-height: 100000px;
       margin-top: 6px;
         float: left;
         font-family: 'San Francisco';
         font-size: xx-large;
-    background-color: rgb(20, 16, 25);
+    background-color: transparent;
     color: #fff
 }
 .liste div {
@@ -141,3 +140,4 @@
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(255, 255, 255, 0.3);
 }
+

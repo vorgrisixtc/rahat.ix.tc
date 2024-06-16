@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <h2 style="color:#fff">Rahat</h2>
@@ -24,9 +24,12 @@ Açık Tema
         <button onclick="window.location.href='./list.html';" class="btn-8">
             Listeleme Modu
             </button>
+            <button onclick="window.location.href='./paint.html';" class="btn-8">
+                Çizim Modu
+                </button>
             <button id="create" class="btn-8">Dışa Aktar</button>
             <a download="Notlar.txt" id="downloadlink" style="display: none; text-decoration: none;">Dosyayı Kaydet</a>
-            <textarea type="text" id="rahat" name="w3review"></textarea>
+            <textarea type="text"></textarea>
             
 <script>
             function changeColor(color) {
@@ -35,15 +38,15 @@ Açık Tema
 
 function Acik() {
     changeColor('#5A575E');
-    document.getElementById("rahat").style.backgroundColor = "#5A575E";
+    style.backgroundColor = "#5A575E";
 }        
 function Koyu() {
     changeColor('#141019');
-    document.getElementById("rahat").style.backgroundColor = "#141019";
+    style.backgroundColor = "#141019";
 }      
 function Dark() {
     changeColor('#000000');
-    document.getElementById("rahat").style.backgroundColor = "#000000";
+    style.backgroundColor = "#000000";
 }    
 (function() {
     var textFile = null,
