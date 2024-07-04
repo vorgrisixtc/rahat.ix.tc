@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Rahat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,7 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
 "></script>
 </head>
 <body>
+<div id="boyut">
 <h2 style="color:#fff">Rahat</h2>
 <p style="color: #fff;font-size: medium;">Basit,hızlı ve rahat not al</p>
 <a href="https://github.com/vorgrisixtc/rahat.ix.tc" rel="nofollow" target="_blank" style="color:#FFFFFF;text-decoration: none;"><p style="font-size: 15"><i>Github Reposu</i></p></a>
@@ -25,15 +27,32 @@ Açık Tema
         Karanlık Tema
         </button>
         <button onclick="window.location.href='./index.html';" class="btn-8">
-            Not Alma Modu
+            <i class="fa-regular fa-note-sticky" style="color: #ffffff;"></i>  Not Alma Modu
             </button>
             <button onclick="window.location.href='./paint.html';" class="btn-8">
-                Çizim Modu
+                <i class="fa-solid fa-pencil" style="color: #ffffff;"></i> Çizim Modu
                 </button>
-            <button id="clickhere" class="btn-8">Dışa Aktar</button>
+            <button id="clickhere" class="btn-8"><i class="fa-solid fa-download" style="color: #ffffff;"></i> Dışa Aktar</button>
+        </div>
+            <button class="btn-8" onclick="buyut()" accesskey='h'><i class="fa-solid fa-user-secret"></i>  Gizli Mod (Alt+H)</button>
             <div class="liste" contenteditable="true" id="rahat">
             </div>
 <script>
+    document.onkeydown = function (e) {
+  e = e || window.event;
+  switch (e.which || e.keyCode) {
+        case 17 : 
+            break;
+  }
+}
+function buyut() {
+  var x = document.getElementById("boyut");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
             function changeColor(color) {
     document.body.style.background = color;
 }
